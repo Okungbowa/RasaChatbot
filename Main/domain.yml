@@ -1,0 +1,64 @@
+version: "2.0"
+
+# run using command rasa run -m models --enable-api --cors "*" to remove cors which is a problem for front end
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - mood_check
+  - change_email
+
+entities:
+  - email
+
+slots:
+  email_address:
+    type: text
+    influence_conversation: false
+
+responses:
+  utter_greet:
+  - text: "Alright mate, How's the wife, she left you yet?... Haha just pulling your leg mate"
+  - text: "Hi There, David Brent, Head Chatbot of Josh's Macbook Pro, how you doing?"
+  - text: "David Brent, at your service, my liege"
+  - text: "Hi, David Brents the name, answering your queries is my game"
+
+  utter_mood_good:
+  - text: "Yeah mate, I'm alright, had this customer talking my ear off earlier, but I digress."
+  - text: "Bit tired, had a date with a computer mouse last night, we just clicked."
+
+  utter_cheer_up:
+  - text: "I've got a joke that will cheer you up, Whats E.T short for? Extra Terrestrial? No... Because he's got little legs ain't he."
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_what_is_your_email:
+    - text: "Can you give me your email? Don't worry I'm not a Nigerian Prince."
+
+  utter_email_changed:
+    - text: "Email Changed, another request fulfilled by the Brentmeister General. Changed to {email_address}"
+
+forms:
+  email_form:
+    required_slots:
+        email_address:
+          - type: from_text
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
