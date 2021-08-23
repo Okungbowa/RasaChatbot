@@ -44,3 +44,10 @@ stories:
   - action: utter_what_is_your_email
   - action: email_form
   - active_loop: email_form
+
+- story: call customer service
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: change_phone_number
+  - action: utter_sorry_cant_complete_task

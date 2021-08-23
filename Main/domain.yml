@@ -53,6 +53,9 @@ responses:
   utter_email_changed:
     - text: "Email Changed, another request fulfilled by the Brentmeister General. Changed to {email_address}"
 
+  utter_sorry_cant_complete_task:
+    - text: "Sorry, you can not do this online. Please call Customer Services on 0800 068 6727 who will support you with this"
+
 forms:
   email_form:
     required_slots:
