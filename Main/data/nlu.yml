@@ -107,3 +107,15 @@ nlu:
     - I'd like to update my email address
     - My email address is wrong
     - I need to change my email
+
+- intent: change_phone_number
+  examples: |
+    - I'd like to change my number
+    - I would like to change my mobile number
+    - How do I change my mobile number
+    - I'd like to update my phone number please
+    - My phone number is incorrect
+    - I need to change my phone number
+    - How do I update my phone number on my account
+    - How do I change my home number
+    - My telephone number has changed
