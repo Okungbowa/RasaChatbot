@@ -12,6 +12,7 @@ intents:
   - bot_challenge
   - mood_check
   - change_email
+  - change_phone_number
 
 entities:
   - email
