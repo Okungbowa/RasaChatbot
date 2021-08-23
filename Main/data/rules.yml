@@ -7,6 +7,11 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
+- rule: Say can't help if out of scope intent
+  steps:
+  - intent: out_of_scope
+  - action: utter_unable_to_help
+
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
   - intent: bot_challenge

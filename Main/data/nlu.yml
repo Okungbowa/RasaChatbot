@@ -119,3 +119,15 @@ nlu:
     - How do I update my phone number on my account
     - How do I change my home number
     - My telephone number has changed
+
+
+- intent: out_of_scope
+  examples: |
+    - Who's the UK Primeminister?
+    - I would like to change my home address
+    - I've moved house
+    - What's the weather today?
+    - Why am I struggling to sleep?
+    - What is the date today?
+    - When is christmas day?
+    - What is 2 + 2?

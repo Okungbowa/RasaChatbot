@@ -13,6 +13,7 @@ intents:
   - mood_check
   - change_email
   - change_phone_number
+  - out_of_scope
 
 entities:
   - email
@@ -55,7 +56,10 @@ responses:
     - text: "Email Changed, another request fulfilled by the Brentmeister General. Changed to {email_address}"
 
   utter_sorry_cant_complete_task:
-    - text: "Sorry, you can not do this online. Please call Customer Services on 0800 068 6727 who will support you with this"
+    - text: "Sorry mate, you can not do this online. Please call Customer Services on 0800 068 6727 who will support you with this"
+
+  utter_unable_to_help:
+    - text: "Sorry mate, can't help you with that right now"
 
 forms:
   email_form:
